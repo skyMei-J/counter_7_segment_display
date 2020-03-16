@@ -23,15 +23,14 @@
 module my_counter_3(
     input clk,
     input  up,
-    
-	output reg [7:0]enable,//enable
+    output reg [7:0]enable,//enable
     output a,
-	output b,
-	output c,
-	output d,
-	output e,
-	output f,
-	output g
+    output b,
+    output c,
+    output d,
+    output e,
+    output f,
+    output g
     );     
 
     wire my_clk;
@@ -70,12 +69,12 @@ module my_counter_3(
   // here using switch is more elegant, but I use logic function to display 7 segment display
   
   assign a = (~in[3] & ~in[2]& ~in[1] &  in[0])|( in[2] & ~in[0])|(in[3] & in[1]);
-	assign b = ( in[2] & ~in[1]&  in[0])|( in[2] &  in[1] & ~in[0])|(in[3] & in[1]);
+  assign b = ( in[2] & ~in[1]&  in[0])|( in[2] &  in[1] & ~in[0])|(in[3] & in[1]);
   assign c = (~in[2] &  in[1]& ~in[0])|( in[3] &  in[2]);
-	assign d = (~in[2] & ~in[1]&  in[0])|( in[2] & ~in[1] & ~in[0])|(in[2] & in[1] & in[0]);
-	assign e = ( in[0])|( in[2]& ~in[1]);             
-	assign f = (~in[3] & ~in[2]&  in[0])|(~in[2] &  in[1])|( in[1] & in[0]);
-	assign g = (~in[3] & ~in[2]& ~in[1])|( in[2] &  in[1] &  in[0]);                                                     
+  assign d = (~in[2] & ~in[1]&  in[0])|( in[2] & ~in[1] & ~in[0])|(in[2] & in[1] & in[0]);
+  assign e = ( in[0])|( in[2]& ~in[1]);             
+  assign f = (~in[3] & ~in[2]&  in[0])|(~in[2] &  in[1])|( in[1] & in[0]);
+  assign g = (~in[3] & ~in[2]& ~in[1])|( in[2] &  in[1] &  in[0]);                                                     
 endmodule
 
 
