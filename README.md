@@ -17,6 +17,8 @@ if(enable[0]==0)begin
 					in=in-1; //in是二進位四位數，用來數0~15                                       
 				end
 至於為何亮了是用0，因為電晶體的關係
+## demo video
+https://www.youtube.com/watch?v=0maNza-WwWk&feature=youtu.be
 
 ![image](https://github.com/skyMei-J/counter_7_segment_display/blob/master/ddd.png)
 
